@@ -19,7 +19,6 @@ channels = {
     'lunatica': 'UCKGSkpjwUAQ7W8XroEwJw3Q',
     'sdm cmb': 'UCBCDtTbfzu-imnSSSklkDjg'
 }
-lista = [channels]
 
 # Função para obter o número de inscritos de um canal
 def get_subscriber_count(channel_id, api_key):
@@ -46,15 +45,12 @@ def index():
 
     return render_template('index.html', lista=channel_data, total_inscritos=total)
 
-
-
-@app.route('/subscribers')
-def subscribers():
-    channel_name = request.args.get('channel')
+@app.route('/subscribers/<channel_name>')
+def subscribers(channel_name):
     channel_id = channels.get(channel_name)
     if channel_id:
         inscritos = get_subscriber_count(channel_id, api_key)
-        return jsonify({'subscriber_count': inscritos})
+        return jsonify({'channel_name': channel_name, 'subscriber_count': inscritos})
     else:
         return jsonify({'error': 'Channel not found'}), 404
 
