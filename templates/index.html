@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Inscritos do YouTube - Atualização Automática (Sem Arquivo)</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/bootstrap.css">
+</head>
+
+<body class="corpo">
+    <div class="container">
+        <h1 class="titulo">Contador de Inscritos do YouTube - Atualização Automática</h1>
+        <div class="total">Total {{total_inscritos}}</div>
+        <div class="tabela-container">
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th class="nome-canal-t">Canais</th>
+                        <th class="inscritos-t">Inscritos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in lista %}
+                    <tr>
+                        <td class="nome-canal-c">
+                            {{i.nome}}
+                        </td>
+                        <td class="inscritos-c">
+                            {{i.inscritos}}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        
+    </footer>
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>

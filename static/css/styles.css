@@ -1,0 +1,182 @@
+.corpo {
+    background-image: url(../img/bg.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+
+}
+footer{
+    width: 100%;
+    height: 320px;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+.titulo {
+    color: #000000;
+    text-align: center;
+}
+
+.total {
+    font-size: 32px;
+    font-weight: bold;
+    color: #dc3545;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tabela-container {
+    overflow-x: auto;
+    /* Permite rolagem horizontal em dispositivos menores */
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fundo transparente */
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    /* Aplicar um desfoque */
+    -webkit-backdrop-filter: blur(10px);
+    /* Suporte para Safari */
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(94, 94, 94, 0.634);
+    /* Adiciona uma sombra para destacar a tabela */
+}
+
+thead th {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+}
+
+tbody td {
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.nome-canal-t {
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.nome-canal-c {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.inscritos-t {
+    font-size: 16px;
+    color: #000000;
+}
+
+.inscritos-c {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: #d2d2d2;
+    color: #000000;
+    /* Mantém o texto em preto */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+tbody tr:hover .nome-canal-c,
+tbody tr:hover .inscritos-c {
+    color: #000000;
+    /* Mantém o texto em branco */
+}
+
+td:hover {
+    opacity: 50%;
+    color: #000000;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .nome-canal {
+        font-size: 16px;
+    }
+
+    .inscritos {
+        font-size: 14px;
+    }
+
+    .total {
+        font-size: 28px;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+}
+
+/*@media (min-width: 768px) {
+    .corpo {
+        background-image: url(../img/bg.png);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 950px) {
+    .corpo {
+        background-image: url(../img/bg.png);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1900px) {
+    .corpo {
+        background-image: url(../img/bg.png);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+}
