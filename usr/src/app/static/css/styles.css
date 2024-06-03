@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+/* Corpo da página */
 .corpo {
-    background-image: url(../img/bg.png) ;
+    background-image: url(../img/bg1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -11,14 +14,14 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
-
-
 }
-footer{
+
+footer {
     width: 100%;
     height: 320px;
 }
 
+/* Contêiner principal */
 .container {
     text-align: center;
     width: 90%;
@@ -26,19 +29,44 @@ footer{
     margin-top: 30px;
 }
 
+/* Título */
 .titulo {
     color: #000000;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
     text-align: center;
 }
 
+/* Total de inscritos */
 .total {
-    font-size: 32px;
+    font-size: 26px;
     font-weight: bold;
     color: #dc3545;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid #dc3545;
+    /* Cor da borda */
+    border-radius: 15px;
+    /* Bordas arredondadas */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Fundo branco com menor opacidade */
+    display: inline-block;
+    transition: border-color 1s ease, color 1s ease, background-color 1s ease;
 }
 
+.total:hover {
+    border-color: #000000;
+    /* Cor da borda ao passar o mouse */
+    color: #ffffff;
+    /* Cor do texto ao passar o mouse */
+    background-color: #dc3545;
+    /* Cor do fundo ao passar o mouse */
+}
+
+/* Tabela de inscritos */
 .tabela-container {
     overflow-x: auto;
     /* Permite rolagem horizontal em dispositivos menores */
@@ -46,10 +74,15 @@ footer{
 
 .tabela {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
+    /* Remove espaçamento entre as células */
     background-color: rgba(255, 255, 255, 0.2);
     /* Fundo transparente */
-    border-radius: 10px;
+    border: 2px solid #dc3545;
+    /* Cor da borda */
+    border-radius: 15px;
+    /* Bordas arredondadas */
     backdrop-filter: blur(10px);
     /* Aplicar um desfoque */
     -webkit-backdrop-filter: blur(10px);
@@ -57,58 +90,111 @@ footer{
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(94, 94, 94, 0.634);
     /* Adiciona uma sombra para destacar a tabela */
+    transition: border-color 1s ease;
 }
 
-thead th {
-    background-color: #ffffff;
+.tabela thead th {
+    background-color: #dc3545;
     color: #000000;
     padding: 10px;
+    border-bottom: 2px solid #dc3545;
+    /* Cor da borda */
 }
 
-tbody td {
+.tabela thead th:first-child {
+    border-top-left-radius: 13px;
+    /* Arredonda o canto superior esquerdo */
+}
+
+.tabela thead th:last-child {
+    border-top-right-radius: 13px;
+    /* Arredonda o canto superior direito */
+}
+
+.tabela tbody td {
     vertical-align: middle;
     padding: 10px;
+    border-bottom: 1px solid #dc3545;
+    /* Cor da borda */
 }
 
-.nome-canal-t {
+.tabela tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 13px;
+    /* Arredonda o canto inferior esquerdo */
+}
+
+.tabela tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 13px;
+    /* Arredonda o canto inferior direito */
+}
+
+/* Estilos de texto */
+.nome-canal-t,
+.inscritos-t {
     font-size: 18px;
-    color: #000000;
     font-weight: bold;
+    color: #000000;
+    text-shadow: 1px 1px 1px #000000;
+    /* Borda fina de cor negativa do texto */
 }
 
 .nome-canal-c {
     font-size: 18px;
-    color: #ffffff;
     font-weight: bold;
-}
-
-.inscritos-t {
-    font-size: 16px;
-    color: #000000;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
+    /* Borda fina de cor negativa do texto */
 }
 
 .inscritos-c {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
+    /* Borda fina de cor negativa do texto */
 }
 
+/* Efeitos de hover */
 tbody tr:hover {
-    background-color: #d2d2d2;
-    color: #000000;
+    background-color: #bcbbbb;
     /* Mantém o texto em preto */
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 1s ease, color 1s ease, border-color 1s ease, text-shadow 1s ease;
 }
 
-tbody tr:hover .nome-canal-c,
 tbody tr:hover .inscritos-c {
     color: #000000;
-    /* Mantém o texto em branco */
+    text-shadow: 1px 1px 1px #ffffff;
+    /* Muda a cor do texto dos inscritos para preto ao passar o mouse */
+}
+
+tbody tr .nome-canal-c:hover,
+tbody tr:hover .nome-canal-t:hover,
+tbody tr:hover .inscritos-t:hover {
+    text-shadow: 1px 1px 1px #ffffff;
+    /* Muda a borda do texto ao passar o mouse */
+}
+
+tbody tr:hover .nome-canal-t,
+tbody tr:hover .inscritos-t {
+    text-shadow: 1px 1px 1px #ffffff;
+    /* Muda a borda do texto ao passar o mouse */
+}
+
+.tabela:hover {
+    border-color: #dc3545;
+    /* Cor da borda da tabela ao passar o mouse */
 }
 
 td:hover {
-    opacity: 50%;
+    opacity: 100%;
     color: #000000;
 }
+
+
+
+
+
+
 
 /* Responsividade */
 @media (max-width: 600px) {
@@ -127,56 +213,19 @@ td:hover {
     .titulo {
         font-size: 24px;
     }
-
 }
-
-/*@media (min-width: 768px) {
-    .corpo {
-        background-image: url(../img/bg.png);
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
+@keyframes count {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media (min-width: 950px) {
-    .corpo {
-        background-image: url(../img/bg.png);
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-    }
+.count-up {
+    animation: count 0.5s ease-in-out forwards;
 }
 
-@media (min-width: 1900px) {
-    .corpo {
-        background-image: url(../img/bg.png);
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-    }
-}
