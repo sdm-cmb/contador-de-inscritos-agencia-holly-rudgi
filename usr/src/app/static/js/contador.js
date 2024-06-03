@@ -15,4 +15,4 @@ function animateCounter(targetElement, start, end, duration) {
 
 // Exemplo de uso: 
 let totalCounter = document.getElementById('totalCounter');
-animateCounter(totalCounter, 0, {{total_inscritos}}, 2000); // Substitua {{total_inscritos}} pelo valor atual
+animateCounter(totalCounter, 0, {total_inscritos}, 2000); // Substitua {{total_inscritos}} pelo valor atual

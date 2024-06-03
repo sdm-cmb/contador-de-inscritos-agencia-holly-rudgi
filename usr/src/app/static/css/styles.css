@@ -190,30 +190,57 @@ td:hover {
     color: #000000;
 }
 
-
-
-
-
-
-
 /* Responsividade */
 @media (max-width: 600px) {
-    .nome-canal {
-        font-size: 16px;
-    }
-
-    .inscritos {
-        font-size: 14px;
-    }
-
-    .total {
-        font-size: 28px;
-    }
-
     .titulo {
         font-size: 24px;
     }
+
+    .total {
+        font-size: 20px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .tabela thead th, .tabela tbody td {
+        padding: 8px;
+    }
+
+    .nome-canal-t, .inscritos-t, .nome-canal-c, .inscritos-c {
+        font-size: 14px;
+    }
+
+    .tabela {
+        border: 1px solid #dc3545;
+        border-radius: 10px;
+    }
 }
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .titulo {
+        font-size: 32px;
+    }
+
+    .total {
+        font-size: 24px;
+        padding: 18px;
+        margin-bottom: 18px;
+    }
+
+    .tabela thead th, .tabela tbody td {
+        padding: 9px;
+    }
+
+    .nome-canal-t, .inscritos-t, .nome-canal-c, .inscritos-c {
+        font-size: 16px;
+    }
+
+    .tabela {
+        border: 1.5px solid #dc3545;
+        border-radius: 12px;
+    }
+}
+
 @keyframes count {
     from {
         opacity: 0;
@@ -227,5 +254,4 @@ td:hover {
 
 .count-up {
     animation: count 0.5s ease-in-out forwards;
-}
-
+} 
