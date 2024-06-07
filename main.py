@@ -47,10 +47,10 @@ def index():
 
 @app.route('/subscribers/<channel_name>')
 def subscribers(channel_name):
-    channel_id = channels.get(channel_name)
+    channel_id = channels.get(channel_name.lower())
     if channel_id:
         inscritos = get_subscriber_count(channel_id, api_key)
-        return jsonify({'channel_name': channel_name, 'subscriber_count': inscritos})
+        return jsonify({'subscriber_count': inscritos})
     else:
         return jsonify({'error': 'Channel not found'}), 404
 
